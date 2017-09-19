@@ -6,6 +6,11 @@
   
   {!! Form::model($task, ['route' => ['tasks.update', $task->id], 'method' => 'put']) !!}
   
+     {!! Form::select('status', [
+      'hurry' => 'hurry',
+      'soso' => 'soso',
+      'anytime' => 'anytime']
+     ) !!}
      {!! Form::label('content', 'やること') !!}
      {!! Form::text('content') !!}
      
