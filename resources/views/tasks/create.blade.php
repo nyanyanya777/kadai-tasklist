@@ -11,13 +11,15 @@
   
     {!! Form::label('status', 'ステータス') !!}
     {!! Form::select('status', [
+      '' => '選択してください',
       'hurry' => 'hurry', 
       'soso' => 'soso',
       'anytime' => 'anytime'],
-      ["class" => "form-control"]
+      null,
+      ["select class" => "form-control"]
     ) !!}</br>
     {!! Form::label('content', 'やること') !!}
-    {!! Form::text('content') !!}</br>
+    {!! Form::text('content', null, ['class' => 'form-control']) !!}</br>
     
   {!! Form::submit('投稿', ['class' => 'btn btn-primary']) !!}
      
